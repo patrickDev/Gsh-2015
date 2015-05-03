@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @donate.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @donate.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @donate.state %>
+</p>
+
+<%= link_to 'Edit', edit_donate_path(@donate) %> |
+<%= link_to 'Back', donates_path %>

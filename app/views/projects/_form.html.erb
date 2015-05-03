@@ -1,0 +1,76 @@
+<%= form_for(@project, :html => { :multipart => true }) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h4>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <div class="form-group">
+    <%= f.label :region, 'Geographical Region' %><br>
+    <%= f.text_field :region, class: "form-control" %>
+  </div>
+ <div class="form-group">
+    <%= f.label :country, 'Project Country'%><br>
+    <%= f.text_field :country , class: "form-control" %>
+  </div>
+<div class="form-group">
+    <%= f.label :project_type, 'Project technical area' %><br>
+    <%= f.text_field :project_type , class: "form-control" %>
+  </div>
+ <div class="form-group">
+    <%= f.label :organization_name, 'Name of your organization'%><br>
+    <%= f.text_field :organization_name , class: "form-control" %>
+  </div>
+<div class="form-group">
+    <%= f.label :leader_name, 'Name of key leaders'%><br>
+    <%= f.text_field :leader_name , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :organization_type, 'Type of organization ' %><br>
+    <%= f.text_field :organization_type , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, 'Address/localization of the organization in country' %><br>
+    <%= f.text_field :address , class: "form-control" %>
+  </div>
+ <div class="form-group">
+    <%= f.label :organization_id, 'Organization’s local official identification number'%><br>
+    <%= f.text_field :organization_id , class: "form-control" %>
+  </div>
+ <div class="form-group">
+    <%= f.label :description, 'Explain issues/problems that proposed project aims to address and solutions proposed'%><br>
+    <%= f.text_area :description , class: "form-control"  %>
+  </div>
+ <div class="form-group">
+    <%= f.label :impact_people, 'Provide an estimate of the number of direct and indirect beneficiaries of the project and how their lives are positively affected by the project activities' %><br>
+    <%= f.text_area :impact_people , class: "form-control" %>
+  </div>
+<div class="form-group">
+    <%= f.label :technical_assistance, 'Specific technical assistance' %><br>
+    <%= f.text_area :technical_assistance , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amount, 'Total amount needed in US$'%><br>
+    <%= f.text_field :amount , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :raised, 'Total amount raised in US$'%><br>
+    <%= f.text_field :raised , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image , class: "form-control" %>
+  </div>
+ <div class="form-group">
+    <%= f.submit class: "btn btn-warning" %>
+  </div>
+<% end %>

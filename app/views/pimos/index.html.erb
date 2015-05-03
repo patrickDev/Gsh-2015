@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pimos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pimos.each do |pimo| %>
+      <tr>
+        <td><%= pimo.area %></td>
+        <td><%= link_to 'Show', pimo %></td>
+        <td><%= link_to 'Edit', edit_pimo_path(pimo) %></td>
+        <td><%= link_to 'Destroy', pimo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pimo', new_pimo_path %>

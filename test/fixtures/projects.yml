@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  region: MyString
+  country: MyString
+  project_type: MyString
+  organization_name: MyString
+  leader_name: MyString
+  organization_type: MyString
+  address: MyString
+  organization_id: MyString
+  description: MyText
+  impact_people: MyText
+  technical_assistance: MyText
+  amount: 9.99
+
+two:
+  region: MyString
+  country: MyString
+  project_type: MyString
+  organization_name: MyString
+  leader_name: MyString
+  organization_type: MyString
+  address: MyString
+  organization_id: MyString
+  description: MyText
+  impact_people: MyText
+  technical_assistance: MyText
+  amount: 9.99

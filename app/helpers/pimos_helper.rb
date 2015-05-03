@@ -1,0 +1,2 @@
+module PimosHelper
+end
